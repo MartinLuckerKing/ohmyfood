@@ -1,0 +1,78 @@
+.cardRestaurant {
+  position: relative;
+  width: 340px;
+  height: 251px;
+
+  .new {
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    background-color: #99E2D0;
+    color: #008766;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 7px 10px 6px 9px;
+    border-radius: 2px;
+  }
+
+.cardImgRestaurant {
+    display:block;
+    width: 340px;
+    height: 174px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    
+}
+
+.flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 15px 15px;
+  }
+
+
+  
+  .title {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 21px;
+        padding-top: 16px;
+        margin-left: 13px;
+        margin-bottom: 3px;
+    }
+
+    p {
+        font-size: 17px;
+        font-weight: 300px;
+        line-height: 20px;
+        padding-bottom: 12px;
+        margin-left: 13px;
+    }
+  }
+  
+  .icon {
+    display: flex;
+    align-items: center;
+    
+    .fa-heart {
+        font-size: 21px;
+        transition: color 0.3s ease-in-out;
+      }
+      
+      &:hover .fa-heart {
+        color: violet;
+      }
+
+    i {
+      margin-right: 33px;
+  }
+  }
+
+    
+}

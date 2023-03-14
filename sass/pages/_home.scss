@@ -1,0 +1,124 @@
+.containerLocation {
+    display: flex;
+    min-height: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-location;
+
+    p {
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 500;
+        margin-right: 17px;
+    }
+
+    i {
+        margin-right: 17px;
+    }
+
+}
+
+.containerPresentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 39px 0 49px 0;
+    background-color: $color-background-secondary;
+    
+    h1 {
+        font-family: Roboto;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-family: Roboto;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        margin: 0 5px 20px 5px;     
+    }
+}
+
+
+.centerComponentsFix {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.background {
+    background-color: $color-background-secondary;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40PX;
+
+}
+
+.paddingTitle {
+ padding-top: 48px;
+ padding-bottom: 26px;
+}
+
+
+.marginBetweenCard {
+ margin-bottom: 12px;
+}
+
+@media only screen and (min-width: 1024px) {
+
+
+    .containerPresentation {
+
+        
+        h1 {
+            font-size: 40px;
+            line-height: 46px;
+        }
+    }
+    .main {
+        display: flex;
+        justify-content: unset;
+        align-items: center;
+        margin-left: calc(50% - 455px);
+        
+        
+    }
+
+    .marginLeftCalc {
+        margin-left: calc(50% - 455px);
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 40PX;
+    
+    }
+
+    .section2 {
+        overflow: scroll;
+    }
+
+    .marginBetweenCard {
+        margin-bottom: 0;
+        margin-right: 26px;
+    }
+}

@@ -1,0 +1,120 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.image {
+    position: relative;
+    min-width: 350px;
+    height: 275px;
+    overflow: hidden;
+    margin-bottom: -10px;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.iconMenu {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+
+    i {
+        margin-right: 41px;
+        font-size: 22px;
+    }
+}
+
+.menuTitle {
+    background-color: $color-background-secondary;
+    border-radius: 40px 40px 0px 0px;
+    padding: 50px 0 0 0;
+    margin-top: -50px;
+    z-index: 1;
+
+    h1 {
+        font-family: Shrikhand;
+        font-size: 28px;
+        line-height: 41px;
+        margin-left: 17px;
+    }
+}
+
+.menuTitle h2 {
+    font-size: 28px;
+}
+
+
+
+.menu {
+    background-color: $color-background-secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 40PX;
+
+    h2 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 20px;
+        height:27px;
+        margin-top: 42px;
+    }
+}
+
+.marginTopButton {
+    margin-top: 26px;
+}
+
+
+@media only screen and (min-width: 1024px) {
+    .menuTitle {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-background-secondary;
+        border-radius: 40px 40px 0px 0px;
+        padding: 50px 0 0 0;
+        margin-top: -50px;
+        z-index: 1;
+        width: 75%;
+    
+        h1 {
+            font-family: Shrikhand;
+            font-size: 28px;
+            line-height: 41px;
+            margin-left: 17px;
+            margin-right: 24px;
+        }
+    }
+    .menu {
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+        background-color: $color-background-secondary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 40PX;
+
+    h2 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 20px;
+        height:27px;
+        margin-top: 42px;
+    }
+}
+}
