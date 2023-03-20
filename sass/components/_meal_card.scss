@@ -1,6 +1,6 @@
-.containerMealMenu {
+.containerMealMenu  {
+    position: relative;
     display: flex;
-    align-items: last baseline;
     justify-content: space-between;
     width: 100%;
     height: 68px;
@@ -8,10 +8,23 @@
     border-radius: 15px;
     background-color:$color-white;
     margin-bottom: 14px;
+    overflow: hidden;
 
   }
+
+
+  .fa-circle-check {
+    color: white;
+    font-size:20px ;
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
+
+  }
+
   
   .containerTitleDescription {
+    display: inline-block;
     width: 275px;
     height: 44px;
     margin-bottom: 12px;
@@ -46,17 +59,51 @@
     
   }
   
-  
+
   .mealPrice {
-    display: flex;
-    align-items: last baseline;
+    display: inline-block;
+    position: relative;
     font-size: 15px;
     font-weight: 700;
     line-height: 18px;
     margin-right: 17px;
     color: #353535;
+
+
   }
 
+.containerMealMenu:hover {
+  .square {
+    display: inline-block;
+    position: absolute;
+    width: 59px;
+    height: 68px;
+    background-color: #99E2D0;
+    right: -50px;
+    animation: slide-in-square 2s forwards;
+  }
+  
+  @keyframes slide-in-square{
+    from {
+      right: -50px;
+    }
+    to {
+      right: 0;
+    }
+  }
+  .mealPrice {
+    animation: slide-in-price 2s forwards;
+
+    @keyframes slide-in-price {
+      from {
+        right: 0px;
+      }
+      to {
+        right: 50px;
+      }
+    }
+  }
+}
   @media only screen and (min-width: 1024px) {
     .divMax {
       width: 75%;

@@ -9,15 +9,15 @@
     <title>La palette du goût</title>
 </head>
 <body>
+    
     <header>
         <div class="containerLogo">
             <div class="logo">
                 <img class="logoSize" src="/public/img/logo/ohmyfood.png" alt="">
             </div>
             <div class="arrow"></div>
-                <a href="/./public/home/index.html"><i class="fa-solid fa-arrow-left arrow"></i></a>
+                <a href="/index.html"><i class="fa-solid fa-arrow-left arrow"></i></a>
             </div>
-    </header>
     <div class="container">
         <div class="image">
             <img src="/public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
@@ -28,28 +28,36 @@
                 <i class="fa-regular fa-heart"></i>
             </div>
 		</div>
-    <div class="menu">
+    </header>
+    <main class="menu">
         <div class="divMax">
+    <section class="fadeInEntree">
         <h2 class="underline">ENTRÉES</h2>
-        <div class="containerMealMenu">
+        
+        <article class="containerMealMenu ">
             <div class="containerTitleDescription"> 
                 <h3>Fricassée d'escargots</h3>
                 <p class="overflow">Au piment d'Espelette</p>
             </div> 
                 <div class="">
-                    <span class="mealPrice">25€</span>
+                    <div class="mealPrice">25€</div>
+                    <div class="square"><i class="fa-solid fa-circle-check"></i></div>
                 </div>
-            </div>
-            <div class="containerMealMenu">
+                
+            </article>
+            
+            <article class="containerMealMenu">
                 <div class="containerTitleDescription"> 
                     <h3>Foie gras de canard mi-cuit</h3>
                     <p class="overflow">Et ses copeaux de truffe noire</p>
                 </div> 
                     <div class="">
                         <span class="mealPrice">35€</span>
-                    </div>
+                        
                 </div>
-            <div class="containerMealMenu">
+                <div class="square"><i class="fa-solid fa-circle-check"></i></div>
+                </article>
+            <article class="containerMealMenu">
                 <div class="containerTitleDescription"> 
                     <h3>Œuf au plat </h3>
                     <p class="overflow">Assaisonné à la truffe sur lit de caviar</p>
@@ -57,9 +65,10 @@
                     <div class="">
                         <span class="mealPrice">20€</span>
                     </div>
-                </div>
+                </article>
+        </section>
             <h2 class="underline">PLATS</h2>
-            <div class="containerMealMenu">
+            <article class="containerMealMenu">
                 <div class="containerTitleDescription"> 
                     <h3>Filet de bœuf aux herbes</h3>
                     <p class="overflow">Accompagné de sa ribambelle de légume</p>
@@ -67,8 +76,8 @@
                     <div class="">
                         <span class="mealPrice">40€</span>
                     </div>
-                </div>
-            <div class="containerMealMenu">
+                </article>
+            <article class="containerMealMenu">
                 <div class="containerTitleDescription"> 
                     <h3>Parmentier de queue de bœuf </h3>
                     <p class="overflow">À la truffe noire sur sa purée de panais</p>
@@ -76,8 +85,8 @@
                     <div class="">
                         <span class="mealPrice">35€</span>
                     </div>
-                </div>
-            <div class="containerMealMenu">
+                </article>
+            <article class="containerMealMenu">
                 <div class="containerTitleDescription"> 
                     <h3>Filet de turbot </h3>
                     <p class="overflow">Aux agrumes</p>
@@ -85,9 +94,9 @@
                     <div class="">
                         <span class="mealPrice">44€</span>
                     </div>
-                </div>
+                </article>
                 <h2 class="underline">DESSERTS</h2>
-            <div class="containerMealMenu">
+            <article class="containerMealMenu">
                 <div class="containerTitleDescription"> 
                     <h3>Paris-Brest</h3>
                     <p class="overflow">Revisité</p>
@@ -95,8 +104,8 @@
                     <div class="">
                         <span class="mealPrice">18€</span>
                     </div>
-                </div>
-            <div class="containerMealMenu">
+                </article>
+            <article class="containerMealMenu">
                 <div class="containerTitleDescription"> 
                     <h3>Macaron au chocolat d'exception </h3>
                     <p class="overflow">Et glace à la vanille de Madagascar</p>
@@ -104,8 +113,8 @@
                     <div class="">
                         <span class="mealPrice">22€</span>
                     </div>
-                </div>
-            <div class="containerMealMenu">
+                </article>
+            <article class="containerMealMenu">
                 <div class="containerTitleDescription"> 
                     <h3>Mousse au chocolat</h3>
                     <p class="overflow">Au piment d'Espelette et à la truffe noire</p>
@@ -113,14 +122,15 @@
                     <div class="">
                         <span class="mealPrice">23€</span>
                     </div>
+            </article>
+            <div class="btnPrimaryCenter">
+                <div class="btnPrimary marginTopButton ">
+                    <a href="#" class="btnPrimaryFont">Commander</a>
                 </div>
-            </div>
-            <div class="btnPrimary marginTopButton">
-                <a href="#" class="btnPrimaryFont">Commander</a>
             </div>
         </div>
     </div>
-</div>
+</main>
 <footer class="containerFooter">
     <img class="LogoFooter" src="/public/img/logo/ohmyfood@2x.svg" alt="">
     <div class="footerIconsMenu">
@@ -134,9 +144,6 @@
         </div>
         <p>Mentions légales</p>
         <a href="mailto:email@example.com"><p>Contact</p></a>
-    </div>
-
-
     </div>
 </footer>
 

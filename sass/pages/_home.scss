@@ -44,7 +44,6 @@
     }
 }
 
-
 .centerComponentsFix {
     display: flex;
     flex-wrap: wrap;
@@ -58,23 +57,49 @@
     background-color: $color-background-secondary;
 }
 
-.main {
+.paddingTitleFonctionnement {
+    padding-top: 48px;
+    padding-bottom: 26px;
+
+}
+
+.paddingTitleRestaurant {
+    background-color: $color-background-secondary;
+    padding-top: 54px;
+    padding-bottom: 26px;
+
+}
+
+.fonctionnement {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-}
-
-.flex {
-    display: flex;
     flex-direction: column;
-    padding-bottom: 40PX;
+    flex-wrap: wrap;
+    margin: 0 12px;
+}
+
+.restaurantFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    flex-direction: column;
+    padding-bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 64px;
 
 }
 
-.paddingTitle {
- padding-top: 48px;
- padding-bottom: 26px;
+.restaurant {
+    background-color: $color-background-secondary;
+    margin-top: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 
@@ -82,43 +107,84 @@
  margin-bottom: 12px;
 }
 
+
+
 @media only screen and (min-width: 1024px) {
 
 
     .containerPresentation {
-
         
         h1 {
             font-size: 40px;
             line-height: 46px;
         }
     }
-    .main {
+
+    .alignTitle {
+        display: inline-block;
+    }
+
+    .restaurant {
+        background-color: $color-background-secondary;
         display: flex;
         justify-content: unset;
-        align-items: center;
-        margin-left: calc(50% - 455px);
-        
+        align-items: unset;
+        flex-wrap: nowrap;
         
     }
 
-    .marginLeftCalc {
-        margin-left: calc(50% - 455px);
-    }
-
-    .flex {
+    .fonctionnement {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .paddingTitleRestaurant {
+        padding-top: 48px;
+        padding-bottom: 26px;
+        margin-left: calc(10% - 100px);
+    }
+
+    .restaurantFlex {
+        display: flex;
+        justify-content: unset;
+        align-items: unset;
+        gap: 40px;
         flex-direction: row;
         padding-bottom: 40PX;
-    
+        margin-left: calc(10% - 100px);
+
     }
 
-    .section2 {
-        overflow: scroll;
+    .row {
+        display: inline-block;
+
+        }
+      
+      .column {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+      }
+
+    .fonctionnementFlex {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+        
     }
 
     .marginBetweenCard {
         margin-bottom: 0;
-        margin-right: 26px;
     }
+
+    .background {
+        background-color: $color-background-secondary;
+        overflow-x: scroll;
+    }   
 }

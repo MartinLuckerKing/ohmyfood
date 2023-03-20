@@ -74,6 +74,22 @@
     margin-top: 26px;
 }
 
+.btnPrimaryCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fadeInEntree {
+    animation: fadein 1s;
+
+
+@keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+    
+}
 
 @media only screen and (min-width: 1024px) {
     .menuTitle {

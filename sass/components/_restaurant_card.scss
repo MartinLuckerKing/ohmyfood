@@ -55,19 +55,48 @@
         margin-left: 13px;
     }
   }
-  
+  i.empty {
+    position: relative;
+    color: black;
+  }
+
+  i.full {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .fa-gradient {
+    background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+    
   .icon {
     display: flex;
     align-items: center;
-    
+
+    .fa-gradient:hover  {
+      background: $button-linear-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 1;
+      transition: 0.33s;
+  
+
+
+    }
+
+
+
     .fa-heart {
         font-size: 21px;
-        transition: color 0.3s ease-in-out;
+
+     
+
       }
       
-      &:hover .fa-heart {
-        color: violet;
-      }
+
 
     i {
       margin-right: 33px;
