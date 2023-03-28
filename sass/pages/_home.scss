@@ -1,9 +1,13 @@
-.containerLocation {
+
+  
+
+.location  {
     display: flex;
-    min-height: 50px;
     justify-content: center;
     align-items: center;
+    min-height: 50px;
     background-color: $color-location;
+
 
     p {
         font-size: 16px;
@@ -16,59 +20,47 @@
         margin-right: 17px;
     }
 
+
 }
 
-.containerPresentation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.presentation {
     padding: 39px 0 49px 0;
     background-color: $color-background-secondary;
+
+    &__center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        h1 {
+            font-family: Roboto;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
     
-    h1 {
-        font-family: Roboto;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-        text-align: center;
-        margin-bottom: 20px;
+        p {
+            font-family: Roboto;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+            margin: 0 5px 20px 5px;     
+        }
+
     }
 
-    p {
-        font-family: Roboto;
-        font-weight: 300;
-        font-size: 18px;
-        line-height: 21px;
-        text-align: center;
-        margin: 0 5px 20px 5px;     
+    @include breakpoint-min($bp-m) {
+        h1 {
+            font-size: 40px;
+            line-height: 46px;
+        }
     }
 }
 
-.centerComponentsFix {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-.background {
-    background-color: $color-background-secondary;
-}
-
-.paddingTitleFonctionnement {
-    padding-top: 48px;
-    padding-bottom: 26px;
-
-}
-
-.paddingTitleRestaurant {
-    background-color: $color-background-secondary;
-    padding-top: 54px;
-    padding-bottom: 26px;
-
-}
 
 .fonctionnement {
     display: flex;
@@ -77,114 +69,69 @@
     flex-direction: column;
     flex-wrap: wrap;
     margin: 0 12px;
-}
 
-.restaurantFlex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
-    flex-direction: column;
-    padding-bottom: 0;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-bottom: 64px;
+    h2 {
+        font-family: Roboto;
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 700;
+    }
 
+    &__padding {
+        padding-top: 48px;
+        padding-bottom: 26px;
+    }
+
+    @include breakpoint-min($bp-m) {
+        &__flex {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+            
+        
+    }
 }
 
 .restaurant {
     background-color: $color-background-secondary;
-    margin-top: 68px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-}
+    
+    &__marginTop {
+        margin-top: 68px;
+    }
 
-
-.marginBetweenCard {
- margin-bottom: 12px;
-}
-
-
-
-@media only screen and (min-width: 1024px) {
-
-
-    .containerPresentation {
-        
-        h1 {
-            font-size: 40px;
-            line-height: 46px;
+    &__background {
+        background-color: $color-background-secondary;
+        padding-bottom: 40px;
+        &__padding {
+            padding-top: 54px;
+            padding-bottom: 26px;
         }
     }
 
-    .alignTitle {
-        display: inline-block;
-    }
-
-    .restaurant {
-        background-color: $color-background-secondary;
-        display: flex;
-        justify-content: unset;
-        align-items: unset;
-        flex-wrap: nowrap;
-        
-    }
-
-    .fonctionnement {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
-
-    .paddingTitleRestaurant {
-        padding-top: 48px;
-        padding-bottom: 26px;
-        margin-left: calc(10% - 100px);
-    }
-
-    .restaurantFlex {
-        display: flex;
-        justify-content: unset;
-        align-items: unset;
-        gap: 40px;
-        flex-direction: row;
-        padding-bottom: 40PX;
-        margin-left: calc(10% - 100px);
-
-    }
-
-    .row {
-        display: inline-block;
-
+    @include breakpoint-min($bp-m) {
+        &__flex {
+            display: flex;
+            justify-content: unset;
+            align-items: flex-start;
+            flex-direction: row;
+            
+            
+ 
         }
-      
-      .column {
-        display: flex;
-        flex-direction: column;
-        flex-basis: 100%;
-        flex: 1;
-      }
-
-    .fonctionnementFlex {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        align-items: center;
-        gap: 40px;
-        
+        &__background {
+            background-color: $color-background-secondary;
+            margin-left: 12px;
+            overflow-x: scroll;
+            
+        }
     }
-
-    .marginBetweenCard {
-        margin-bottom: 0;
-    }
-
-    .background {
-        background-color: $color-background-secondary;
-        overflow-x: scroll;
-    }   
 }
+
+

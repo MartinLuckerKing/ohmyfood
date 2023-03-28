@@ -1,4 +1,4 @@
-.buttonChoice {
+.buttonFonctionnement {
     position: relative;
     display: flex;
     justify-self: center;
@@ -6,7 +6,40 @@
     border-radius: 20px;
     background-color: $color-background-secondary;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-    width: 340px;
+    width: 310px;
+    max-height: 76px;
+
+    @include breakpoint-max($bp-xs) {
+        width: 290px;
+    }
+
+    @include breakpoint-min($bp-lg) {
+        width: 340px;
+    }
+    
+    
+    &__margin {
+        margin-bottom: 14px;
+      }
+    
+      @include breakpoint-min($bp-m) {
+        &__margin {
+          margin-right: 22px;
+        }
+    }
+        @include breakpoint-min($bp-lg) {
+            &__margin {
+              margin-right: 36px;
+            }
+    }
+
+    &--hover:hover {
+        background-color:$color-hover-funct-button;
+        
+        i {
+            color: $color-button-primary-1;
+        }
+    }
 
     i {
         margin-left: 0;
@@ -24,34 +57,20 @@
     }
 
 
-    .numberRounded {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        background-color: $color-button-primary-1;
-        left: -11px;
-        color: white;
-        font-size: 14px;
-        line-height: 16px;
 
-    }
 }
-.buttonChoice:hover {
-    background-color:$color-hover-funct-button;
-    
-    i {
-        color: $color-button-primary-1;
-    }
-}
+.numberRounded {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $color-button-primary-1;
+    left: -11px;
+    color: white;
+    font-size: 14px;
+    line-height: 16px;
 
-
-@media only screen and (min-width: 769px) {
-
-    .centerComponents {
-        flex-direction: row;
-    }
 }

@@ -1,55 +1,89 @@
 
-.container {
+.subHeader {
     display: flex;
     flex-direction: column;
 
-}
+    &__image {
+        position: relative;
+        height: 275px;
+        overflow: hidden;
+        margin-bottom: -10px;
 
-.image {
-    position: relative;
-    min-width: 350px;
-    height: 275px;
-    overflow: hidden;
-    margin-bottom: -10px;
-}
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 
-.image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+    &__title {
+        background-color: $color-background-secondary;
+        border-radius: 40px 40px 0px 0px;
+        padding: 50px 0 0 0;
+        margin-top: -50px;
+        z-index: 1;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+    
+        h1 {
+            font-family: Shrikhand;
+            font-size: 28px;
+            line-height: 41px;
+            margin-left: 17px;
+        }
+    
+        h2 {
+            font-size: 28px;
+        }
+    
+        i {
+            margin-left: 24px;
+            margin-right: 41px;
+            font-size: 22px;
+        }
 
-.iconMenu {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-
-    i {
-        margin-right: 41px;
-        font-size: 22px;
+        @include breakpoint-min($bp-m) {
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 75%;
+          }
     }
 }
 
-.menuTitle {
-    background-color: $color-background-secondary;
-    border-radius: 40px 40px 0px 0px;
-    padding: 50px 0 0 0;
-    margin-top: -50px;
-    z-index: 1;
+.fadeIn {
 
-    h1 {
-        font-family: Shrikhand;
-        font-size: 28px;
-        line-height: 41px;
-        margin-left: 17px;
+    &__entree {
+    animation: fadein 2s;
     }
-}
 
-.menuTitle h2 {
-    font-size: 28px;
-}
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+    
+    &__plat {
+        animation: fadein 4s;
+        }
 
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        
+    &__dessert {
+        animation: fadein 5s;
+        }
+
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+}
 
 
 .menu {
@@ -68,52 +102,10 @@
         height:27px;
         margin-top: 42px;
     }
-}
-
-.marginTopButton {
-    margin-top: 26px;
-}
-
-.btnPrimaryCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.fadeInEntree {
-    animation: fadein 1s;
 
 
-@keyframes fadein {
-        from { opacity: 0; }
-        to   { opacity: 1; }
-    }
-    
-}
 
-@media only screen and (min-width: 1024px) {
-    .menuTitle {
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $color-background-secondary;
-        border-radius: 40px 40px 0px 0px;
-        padding: 50px 0 0 0;
-        margin-top: -50px;
-        z-index: 1;
-        width: 75%;
-    
-        h1 {
-            font-family: Shrikhand;
-            font-size: 28px;
-            line-height: 41px;
-            margin-left: 17px;
-            margin-right: 24px;
-        }
-    }
-    .menu {
+    @include breakpoint-min($bp-m) {
         margin-left: auto;
         margin-right: auto;
         width: 75%;
@@ -124,13 +116,21 @@
         flex-direction: column;
         padding-bottom: 40PX;
 
-    h2 {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
-        margin-bottom: 20px;
-        height:27px;
-        margin-top: 42px;
+        &__size {
+            width: 60%;
+        }
     }
 }
+
+.btnPrimary {
+
+    &__center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__marginTop {
+        margin-top: 26px;
+    }
 }

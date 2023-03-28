@@ -1,8 +1,8 @@
-.containerMealMenu  {
+.mealMenu  {
     position: relative;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    min-width: 349px;
     height: 68px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
@@ -10,33 +10,24 @@
     margin-bottom: 14px;
     overflow: hidden;
 
-  }
+    @include breakpoint-max($bp-xs) {
+      min-width: 290px;
+    }
 
 
-  .fa-circle-check {
-    color: white;
-    font-size:20px ;
-    display: flex;
-    justify-content: center;
-    align-items: first baseline;
 
-  }
+    &__titleDescription {
+      position: relative;
+      display: inline-block;
+      height: 44px;
+      margin:12px 10px;
 
-  
-  .containerTitleDescription {
-    display: inline-block;
-    width: 275px;
-    height: 44px;
-    margin-bottom: 12px;
-    margin-left: 10px;
-
-    
-  
+      
     h3 {
       font-size: 18px;
       font-weight: 600;
       line-height: 21px;
-      
+      margin-bottom: 4px;
     }
   
     p {
@@ -48,19 +39,24 @@
       
   
     }
-  
-  }
-  
-  .overflow {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 275px;
-    
-  }
-  
+    &__overflow {
+      position: relative;
+      display: block;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 220px;
 
-  .mealPrice {
+      @include breakpoint-min($bp-m) {
+        max-width: max-content;
+      }
+
+      
+    }
+  }
+  
+  &__price {
+    margin-top: 35px;
     display: inline-block;
     position: relative;
     font-size: 15px;
@@ -69,44 +65,82 @@
     margin-right: 17px;
     color: #353535;
 
+      }
 
-  }
 
-.containerMealMenu:hover {
-  .square {
-    display: inline-block;
-    position: absolute;
-    width: 59px;
-    height: 68px;
-    background-color: #99E2D0;
-    right: -50px;
-    animation: slide-in-square 2s forwards;
-  }
-  
-  @keyframes slide-in-square{
-    from {
+  &--hover:hover {
+    .square {
+      display: inline-block;
+      position: absolute;
+      width: 59px;
+      height: 68px;
+      background-color: #99E2D0;
       right: -50px;
-    }
-    to {
-      right: 0;
-    }
-  }
-  .mealPrice {
-    animation: slide-in-price 2s forwards;
+      animation: slide-in-square 1.2s forwards;
 
-    @keyframes slide-in-price {
-      from {
-        right: 0px;
+      @keyframes slide-in-square{
+        from {
+          right: -50px;
+        }
+        to {
+          right: 0;
+        }
       }
-      to {
-        right: 50px;
+  
+    }
+
+    .fa-circle-check:before {
+      display: block;
+      animation: rotate 1.1s linear ;
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(360deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+      }
+      
+    .fa-circle-check {
+      color: white;
+      font-size:20px ;
+      opacity: 1;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  
+    }
+
+    .mealMenu__price {
+      animation: slide-in-price 1.2s forwards;
+      
+      @keyframes slide-in-price {
+        from {
+          right: 0px;
+        }
+        to {
+          right: 50px;
+        }
+    }
+  }
+    .mealMenu__titleDescription__overflow {
+      max-width: 180px;
+
+      @include breakpoint-min($bp-m) {
+        max-width: 9999px;
       }
     }
   }
+
+.fa-circle-check:before {
+display: none;
 }
-  @media only screen and (min-width: 1024px) {
-    .divMax {
-      width: 75%;
-      max-width: 900px;
-    }
-  }
+
+
+}
+

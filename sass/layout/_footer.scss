@@ -1,4 +1,4 @@
-.containerFooter {
+.footer {
     background-color: $color-footer;
     display: flex;
     flex-direction: column;
@@ -14,26 +14,27 @@
     i {
         color: $color-white;
     }
-}
 
-.LogoFooter {
-    max-width: 137px;
-    max-height: 27px;
-    padding: 22px 0 16px 25px;
-}
-
-.footerIconsMenu {
-    display: flex;
-    flex-direction: column;
-
-    p {
-        margin-left: 25px;
-        margin-bottom: 7px;
-        
+    
+    
+    &__logo {
+        max-width: 137px;
+        max-height: 27px;
+        padding: 22px 0 16px 25px;
     }
-}
 
-.iconsMenu {
+    &__iconsMenu {
+        display: flex;
+        flex-direction: column;
+    
+        p {
+            margin-left: 25px;
+            margin-bottom: 7px;
+            
+        }
+    }
+
+    &__menu {
     display: flex;
     flex-direction: row;
     height: 27px;
@@ -50,54 +51,37 @@
         margin-left: 11px;
         line-height: 19px;
     }
-}
-
-
-
-.footerMenu {
-
-    margin-left: 25px;
-    
-    p {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 19px;
-        margin-bottom: 7px;
     }
-}
-
-
-
-@media only screen and (min-width: 1024px) {
-    .containerFooter {
-        flex-direction: row-reverse;
-        align-items: center;
-        padding-bottom: 28px;
-        padding-top: 39px;
 
 }
 
-.footerIconsMenu {
-    flex-direction: row;
-}
+    @include breakpoint-min($bp-m) {
+        .footer {
+            flex-direction: row-reverse;
+            align-items: center;
+            padding-bottom: 28px;
+            padding-top: 39px;
 
-.LogoFooter {
-    margin-right: 80px;
-    margin-left: 71px;
-    padding: 0 0 5px 0;
-}
+            &__iconsMenu {
+                flex-direction: row;
+            }
 
-.footerIconsMenu {
-    display: flex;
-    flex-direction: row;
-    column-gap: 37px;
+            &__logo {
+                margin-right: 80px;
+                margin-left: 71px;
+                padding: 0 0 5px 0;
+            }
 
-    p {
-        margin-bottom: 7px;
+            &__menu {
+                display: flex;
+                flex-direction: row;
+
+            
+                p {
+                    margin-bottom: 7px;
+                    
+                }
+            }
+        }
         
-    }
-}
-
-
-
 }

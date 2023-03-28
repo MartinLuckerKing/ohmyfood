@@ -1,0 +1,34 @@
+.fa-heart {
+    font-size: 22px;
+    
+&__fa-gradient {
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  &:hover {
+    background: $button-linear-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 22px;
+    opacity: 1;
+    transition: 1.33s;
+  }
+}
+  &__empty {
+    position: relative;
+    color: black;
+  }
+
+  &__full {
+    position: absolute;
+    opacity: 0;
+  }
+  
+  &__icon {
+    display: flex;
+    align-items: center;
+  }
+
+
+}

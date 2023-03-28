@@ -1,9 +1,27 @@
-.cardRestaurant {
+.card {
   position: relative;
   width: 340px;
   height: 251px;
 
-  .new {
+  @include breakpoint-max($bp-xs) {
+    width: 300px;
+
+}
+
+  &__margin {
+    margin-bottom: 14px;
+  }
+
+  @include breakpoint-min($bp-m) {
+    &__margin {
+      margin-right: 36px;
+    }
+  
+  }
+
+
+
+  &__new {
     position: absolute;
     top: 14px;
     right: 15px;
@@ -13,28 +31,39 @@
     font-weight: bold;
     padding: 7px 10px 6px 9px;
     border-radius: 2px;
-  }
 
-.cardImgRestaurant {
+    @include breakpoint-max($bp-xs) {
+      right: 15px;
+
+}
+
+}
+
+  &__imgRestaurant {
     display:block;
     width: 340px;
     height: 174px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
-    
-}
 
-.flexbox {
+    @include breakpoint-max($bp-xs) {
+        width: 300px;
+  
+}
+    
+  }
+
+  &__flexbox {
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 15px 15px;
+
+
   }
 
-
-  
-  .title {
+  &__text {
     display: flex;
     flex-direction: column;
 
@@ -49,59 +78,14 @@
 
     p {
         font-size: 17px;
-        font-weight: 300px;
+        font-weight: 300;
         line-height: 20px;
         padding-bottom: 12px;
         margin-left: 13px;
     }
   }
-  i.empty {
-    position: relative;
-    color: black;
+  &__icon {
+    margin-right: 33px;
+    font-size: 22px;
   }
-
-  i.full {
-    position: absolute;
-    opacity: 0;
-  }
-
-  .fa-gradient {
-    background: black;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-    
-  .icon {
-    display: flex;
-    align-items: center;
-
-    .fa-gradient:hover  {
-      background: $button-linear-gradient;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      opacity: 1;
-      transition: 0.33s;
-  
-
-
-    }
-
-
-
-    .fa-heart {
-        font-size: 21px;
-
-     
-
-      }
-      
-
-
-    i {
-      margin-right: 33px;
-  }
-  }
-
-    
 }
