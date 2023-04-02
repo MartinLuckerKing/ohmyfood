@@ -1,0 +1,58 @@
+.timer {
+    animation: show 3s linear forwards;
+  
+  
+    @keyframes show {
+      0%, 99% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 1;
+      }
+  }
+  
+  &__loader {
+    animation: hide 3s linear forwards;
+    transition-property: visibility;
+    opacity: 1;
+    
+  
+    @keyframes hide {
+      0%, 99% {
+          opacity: 1;
+          
+      }
+      100% {
+          visibility: hidden;
+      }
+  }
+  }
+  }
+  
+  .loader {
+    position: relative;
+    height: 125px;
+    width: 125px;
+    display: inline-block;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    border-left-color: $color-button-primary-1;
+    animation: rotate 1.2s linear infinite;
+    
+  
+    @keyframes rotate {
+      100%{
+        transform: rotate(360deg);
+      }
+    } 
+  
+    &__center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      }
+    }
+  
