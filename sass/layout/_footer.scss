@@ -1,87 +1,80 @@
 .footer {
-    background-color: $color-footer;
+  background-color: $color-footer;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 33px;
+
+  p {
+    color: $color-white;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  i {
+    color: $color-white;
+  }
+
+  &__logo {
+    max-width: 137px;
+    max-height: 27px;
+    padding: 22px 0 16px 25px;
+  }
+
+  &__iconsMenu {
     display: flex;
     flex-direction: column;
-    padding-bottom: 33px;
-    
+
     p {
-        color:$color-white;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
+      margin-left: 25px;
+      margin-bottom: 7px;
     }
+  }
 
-    i {
-        color: $color-white;
-    }
-
-    
-    
-    &__logo {
-        max-width: 137px;
-        max-height: 27px;
-        padding: 22px 0 16px 25px;
-    }
-
-    &__iconsMenu {
-        display: flex;
-        flex-direction: column;
-    
-        p {
-            margin-left: 25px;
-            margin-bottom: 7px;
-            
-        }
-    }
-
-    &__menu {
+  &__menu {
     display: flex;
     flex-direction: row;
     height: 27px;
     align-items: baseline;
 
     i {
-        font-size: 13px;
-        height: 13px;
-        width: 11px;
-        margin-left: 25px;
-    }
-    
-    p {
-        margin-left: 11px;
-        line-height: 19px;
-    }
+      font-size: 13px;
+      height: 13px;
+      width: 11px;
+      margin-left: 25px;
     }
 
+    p {
+      margin-left: 11px;
+      line-height: 19px;
+    }
+  }
 }
 
-    @include breakpoint-min($bp-m) {
-        .footer {
-            flex-direction: row-reverse;
-            align-items: center;
-            padding-bottom: 28px;
-            padding-top: 39px;
+@include breakpoint-min($bp-m) {
+  .footer {
+    flex-direction: row-reverse;
+    align-items: center;
+    padding-bottom: 28px;
+    padding-top: 39px;
 
-            &__iconsMenu {
-                flex-direction: row;
-            }
+    &__iconsMenu {
+      flex-direction: row;
+    }
 
-            &__logo {
-                margin-right: 80px;
-                margin-left: 71px;
-                padding: 0 0 5px 0;
-            }
+    &__logo {
+      margin-right: 80px;
+      margin-left: 71px;
+      padding: 0 0 5px 0;
+    }
 
-            &__menu {
-                display: flex;
-                flex-direction: row;
+    &__menu {
+      display: flex;
+      flex-direction: row;
 
-            
-                p {
-                    margin-bottom: 7px;
-                    
-                }
-            }
-        }
-        
+      p {
+        margin-bottom: 7px;
+      }
+    }
+  }
 }

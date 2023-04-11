@@ -1,136 +1,142 @@
-
 .subHeader {
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    position: relative;
+    height: 275px;
+    overflow: hidden;
+    margin-bottom: -10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    background-color: $color-background-secondary;
+    border-radius: 40px 40px 0px 0px;
+    padding: 50px 0 0 0;
+    margin-top: -50px;
+    z-index: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
 
-    &__image {
-        position: relative;
-        height: 275px;
-        overflow: hidden;
-        margin-bottom: -10px;
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    h1 {
+      font-family: Shrikhand;
+      font-size: 28px;
+      line-height: 41px;
+      margin-left: 17px;
     }
 
-    &__title {
-        background-color: $color-background-secondary;
-        border-radius: 40px 40px 0px 0px;
-        padding: 50px 0 0 0;
-        margin-top: -50px;
-        z-index: 1;
-        display:flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: baseline;
-    
-        h1 {
-            font-family: Shrikhand;
-            font-size: 28px;
-            line-height: 41px;
-            margin-left: 17px;
-        }
-    
-        h2 {
-            font-size: 28px;
-        }
-    
-        i {
-            margin-left: 24px;
-            margin-right: 41px;
-            font-size: 22px;
-        }
-
-        @include breakpoint-min($bp-m) {
-            margin-left: auto;
-            margin-right: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 75%;
-          }
+    h2 {
+      font-size: 28px;
     }
+
+    i {
+      margin-left: 24px;
+      margin-right: 41px;
+      font-size: 22px;
+    }
+
+    @include breakpoint-min($bp-m) {
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 75%;
+    }
+  }
 }
 
 .fadeIn {
-
-    &__entree {
+  &__entree {
     animation: fadein 2s;
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
     }
+    to {
+      opacity: 1;
+    }
+  }
 
-        @keyframes fadein {
-            from { opacity: 0; }
-            to   { opacity: 1; }
-        }
-    
-    &__plat {
-        animation: fadein 4s;
-        }
+  &__plat {
+    animation: fadein 4s;
+  }
 
-        @keyframes fadein {
-            from { opacity: 0; }
-            to   { opacity: 1; }
-        }
-        
-    &__dessert {
-        animation: fadein 5s;
-        }
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
-        @keyframes fadein {
-            from { opacity: 0; }
-            to   { opacity: 1; }
-        }
+  &__dessert {
+    animation: fadein 5s;
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 
-
 .menu {
+  background-color: $color-background-secondary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 40px;
+
+  h2 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 20px;
+    height: 27px;
+    margin-top: 42px;
+  }
+
+  @include breakpoint-min($bp-m) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
     background-color: $color-background-secondary;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 40PX;
+    padding-bottom: 40px;
 
-    h2 {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19px;
-        margin-bottom: 20px;
-        height:27px;
-        margin-top: 42px;
+    &__size {
+      width: 60%;
     }
-
-
-
-    @include breakpoint-min($bp-m) {
-        margin-left: auto;
-        margin-right: auto;
-        width: 75%;
-        background-color: $color-background-secondary;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding-bottom: 40PX;
-
-        &__size {
-            width: 60%;
-        }
-    }
+  }
 }
 
 .btnPrimary {
+  &__center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    &__center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &__marginTop {
-        margin-top: 26px;
-    }
+  &__marginTop {
+    margin-top: 26px;
+  }
 }

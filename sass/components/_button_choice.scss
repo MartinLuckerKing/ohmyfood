@@ -1,76 +1,71 @@
 .buttonFonctionnement {
-    position: relative;
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    border-radius: 20px;
-    background-color: $color-background-secondary;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-    width: 310px;
-    max-height: 76px;
+  position: relative;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: $color-background-secondary;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  width: 310px;
+  max-height: 76px;
 
-    @include breakpoint-max($bp-xs) {
-        width: 290px;
-    }
+  @include breakpoint-max($bp-xs) {
+    width: 290px;
+  }
 
-    @include breakpoint-min($bp-lg) {
-        width: 340px;
-    }
-    
-    
+  @include breakpoint-min($bp-lg) {
+    width: 340px;
+  }
+
+  &__margin {
+    margin-bottom: 14px;
+  }
+
+  @include breakpoint-min($bp-m) {
     &__margin {
-        margin-bottom: 14px;
-      }
-    
-      @include breakpoint-min($bp-m) {
-        &__margin {
-          margin-right: 22px;
-        }
+      margin-right: 22px;
     }
-        @include breakpoint-min($bp-lg) {
-            &__margin {
-              margin-right: 36px;
-            }
+  }
+  @include breakpoint-min($bp-lg) {
+    &__margin {
+      margin-right: 36px;
     }
+  }
 
-    &--hover:hover {
-        background-color:$color-hover-funct-button;
-        
-        i {
-            color: $color-button-primary-1;
-        }
-    }
+  &--hover:hover {
+    background-color: $color-hover-funct-button;
 
     i {
-        margin-left: 0;
-        font-size: 19px;
-        color: $color-icons;
-        padding-left: 33px;
+      color: $color-button-primary-1;
     }
+  }
 
-    h3 {
-        min-width: 175px;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
-        padding: 29px 38px 28px 27px;
-    }
+  i {
+    margin-left: 0;
+    font-size: 19px;
+    color: $color-icons;
+    padding-left: 33px;
+  }
 
-
-
+  h3 {
+    min-width: 175px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 29px 38px 28px 27px;
+  }
 }
 .numberRounded {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: $color-button-primary-1;
-    left: -11px;
-    color: white;
-    font-size: 14px;
-    line-height: 16px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: $color-button-primary-1;
+  left: -11px;
+  color: white;
+  font-size: 14px;
+  line-height: 16px;
 }

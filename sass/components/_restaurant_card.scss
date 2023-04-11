@@ -5,8 +5,7 @@
 
   @include breakpoint-max($bp-xs) {
     width: 300px;
-
-}
+  }
 
   &__margin {
     margin-bottom: 14px;
@@ -16,16 +15,13 @@
     &__margin {
       margin-right: 36px;
     }
-  
   }
-
-
 
   &__new {
     position: absolute;
     top: 14px;
     right: 15px;
-    background-color: #99E2D0;
+    background-color: #99e2d0;
     color: #008766;
     font-size: 14px;
     font-weight: bold;
@@ -34,23 +30,19 @@
 
     @include breakpoint-max($bp-xs) {
       right: 15px;
-
-}
-
-}
+    }
+  }
 
   &__imgRestaurant {
-    display:block;
+    display: block;
     width: 340px;
     height: 174px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
 
     @include breakpoint-max($bp-xs) {
-        width: 300px;
-  
-}
-    
+      width: 300px;
+    }
   }
 
   &__flexbox {
@@ -59,8 +51,6 @@
     justify-content: space-between;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 15px 15px;
-
-
   }
 
   &__text {
@@ -68,20 +58,20 @@
     flex-direction: column;
 
     h2 {
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 21px;
-        padding-top: 16px;
-        margin-left: 13px;
-        margin-bottom: 3px;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 21px;
+      padding-top: 16px;
+      margin-left: 13px;
+      margin-bottom: 3px;
     }
 
     p {
-        font-size: 17px;
-        font-weight: 300;
-        line-height: 20px;
-        padding-bottom: 12px;
-        margin-left: 13px;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 20px;
+      padding-bottom: 12px;
+      margin-left: 13px;
     }
   }
 }

@@ -1,132 +1,121 @@
-.location  {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 50px;
-    background-color: $color-location;
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  background-color: $color-location;
 
+  p {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 500;
+    margin-right: 17px;
+  }
 
-    p {
-        font-size: 16px;
-        line-height: 19px;
-        font-weight: 500;
-        margin-right: 17px;
-    }
-
-    i {
-        margin-right: 17px;
-    }
-
-
+  i {
+    margin-right: 17px;
+  }
 }
 
 .presentation {
-    padding: 39px 0 49px 0;
-    background-color: $color-background-secondary;
+  padding: 39px 0 49px 0;
+  background-color: $color-background-secondary;
 
-    &__center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        
-        h1 {
-            font-family: Roboto;
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 28px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-    
-        p {
-            font-family: Roboto;
-            font-weight: 300;
-            font-size: 18px;
-            line-height: 21px;
-            text-align: center;
-            margin: 0 5px 20px 5px;     
-        }
-
-    }
-
-    @include breakpoint-min($bp-m) {
-        h1 {
-            font-size: 40px;
-            line-height: 46px;
-        }
-    }
-}
-
-
-.fonctionnement {
+  &__center {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex-wrap: wrap;
-    margin: 0 12px;
 
-    h2 {
-        font-family: Roboto;
-        font-size: 24px;
-        line-height: 28px;
-        font-weight: 700;
+    h1 {
+      font-family: Roboto;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      margin-bottom: 20px;
     }
 
-    &__padding {
-        padding-top: 48px;
-        padding-bottom: 26px;
+    p {
+      font-family: Roboto;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+      margin: 0 5px 20px 5px;
     }
+  }
 
-    @include breakpoint-min($bp-m) {
-        &__flex {
-            display: flex;
-            justify-content: center;
-            flex-direction: row;
-            flex-wrap: nowrap;
-        }
+  @include breakpoint-min($bp-m) {
+    h1 {
+      font-size: 40px;
+      line-height: 46px;
     }
+  }
+}
+
+.fonctionnement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 12px;
+
+  h2 {
+    font-family: Roboto;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+
+  &__padding {
+    padding-top: 48px;
+    padding-bottom: 26px;
+  }
+
+  @include breakpoint-min($bp-m) {
+    &__flex {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+  }
 }
 
 .restaurant {
+  background-color: $color-background-secondary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__marginTop {
+    margin-top: 68px;
+  }
+
+  &__background {
     background-color: $color-background-secondary;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    
-    &__marginTop {
-        margin-top: 68px;
+    padding-bottom: 40px;
+    &__padding {
+      padding-top: 54px;
+      padding-bottom: 26px;
     }
+  }
 
+  @include breakpoint-min($bp-m) {
+    &__flex {
+      display: flex;
+      justify-content: unset;
+      align-items: flex-start;
+      flex-direction: row;
+    }
     &__background {
-        background-color: $color-background-secondary;
-        padding-bottom: 40px;
-        &__padding {
-            padding-top: 54px;
-            padding-bottom: 26px;
-        }
+      background-color: $color-background-secondary;
+      margin-left: 12px;
+      overflow-x: scroll;
     }
-
-    @include breakpoint-min($bp-m) {
-        &__flex {
-            display: flex;
-            justify-content: unset;
-            align-items: flex-start;
-            flex-direction: row;
-            
-            
- 
-        }
-        &__background {
-            background-color: $color-background-secondary;
-            margin-left: 12px;
-            overflow-x: scroll;
-            
-        }
-    }
+  }
 }
-
-

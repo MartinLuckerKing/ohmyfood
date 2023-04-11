@@ -1,33 +1,31 @@
-$color-confirm:#99E2D0;
-$color-positive-message:#008766;
-$color-location: #EAEAEA;
-$color-background-secondary:#F6F6F6;
-$color-button-primary-1:#9356DC;
-$color-button-primary-2:#FF79DA;
-$color-black:#000000;
-$color-white:#FFFFFF;
-$color-icons: #7E7E7E;
-$color-hover-funct-button:#F5EDFF;
-$color-footer:#353535;
+$color-confirm: #99e2d0;
+$color-positive-message: #008766;
+$color-location: #eaeaea;
+$color-background-secondary: #f6f6f6;
+$color-button-primary-1: #9356dc;
+$color-button-primary-2: #ff79da;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-icons: #7e7e7e;
+$color-hover-funct-button: #f5edff;
+$color-footer: #353535;
 
 $flex-direction-row: row;
 $flex-direction-column: column;
 
 $menu-height: 68px;
 
-
 $degree-angle-gradient: 200.64deg;
 $pourcent-first-color: -5.2%;
 $pourcent-second-color: 110.74%;
 
-$button-linear-gradient: linear-gradient($degree-angle-gradient, $color-button-primary-1 $pourcent-first-color, $color-button-primary-2 $pourcent-second-color);
+$button-linear-gradient: linear-gradient(
+  $degree-angle-gradient,
+  $color-button-primary-1 $pourcent-first-color,
+  $color-button-primary-2 $pourcent-second-color
+);
 
-$bp-xs:374px;
-$bp-s:768px;
-$bp-m:992px;
-$bp-lg:1290px;
-
-
-
-
-
+$bp-xs: 374px;
+$bp-s: 768px;
+$bp-m: 992px;
+$bp-lg: 1290px;
